@@ -9,8 +9,7 @@ function flip(arr, n) {
 }
 
 function pancakeSort(arr) {
-    let arrSubSize = arr.length;
-    while (arrSubSize > 1) {
+    for (let arrSubSize = arr.length; arrSubSize > 1; arrSubSize--) {
         let maxPos = 0;
         for (let i = 0; i < arrSubSize; i++) {
             if (arr[i] > arr[maxPos]) { 
@@ -19,7 +18,6 @@ function pancakeSort(arr) {
         }
         arr = flip(arr, maxPos + 1);
         arr = flip(arr, arrSubSize);
-        arrSubSize--;
     }
     return arr;
 }
