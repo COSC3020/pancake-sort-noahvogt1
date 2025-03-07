@@ -1,8 +1,25 @@
-function flip(array, n) {
-    return array;
+function flip(arr, n) {
+    if (n > arr.length) n = arr.length;
+    for (let i = 0; i < n / 2; i++) {
+        let tmp = arr[i];
+        arr[i] = arr[n - i - 1];
+        arr[n - i - 1] = tmp;
+    }
+    return arr;
 }
 
-// Use only flip() here to manipulate the array
-function pancakeSort(array) {
-    return array;
+function pancakeSort(arr) {
+    let arrSubSize = arr.length;
+    while (arrSubSize > 1) {
+        let maxPos = 0;
+        for (let i = 0; i < arrSubSize; i++) {
+            if (arr[i] > arr[maxPos]) { 
+                maxPos = i;
+            }
+        }
+        arr = flip(arr, maxPos + 1);
+        arr = flip(arr, arrSubSize);
+        arrSubSize--;
+    }
+    return arr;
 }
