@@ -33,7 +33,7 @@ number of comparisons of pancakes? What is it in terms of the number of flips?
 Add your answer to this markdown file.
 
 The outer loop runs n times along with each of the three inner loops. This provides
-$T(3n^2) \in \Theta(n^2)$  as the runetime complexity. The number of flips would be 2n
+$T(3n^2) \in \Theta(n^2)$  as the runtime complexity based om the number of compares. The number of flips would be 2n
 meaning $T(2n) \in \Theta(n)$  because I flip it 2 times per outer for loop iteration 
 and the while loop runs n times.
 
