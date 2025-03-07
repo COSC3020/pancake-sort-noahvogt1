@@ -1,4 +1,7 @@
 # Pancake Sort
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
+
+I did not use any resources; however, I have to admit this was suprisingly one of the most fun ones to write even though it was so simple. It was just rather satisfying.
 
 There is an abstract data type (ADT) called a *pancake array*, which provides
 the function `flip(array, n)`, which takes the top (first) $n$ items in the
@@ -28,4 +31,10 @@ element into its correct position.
 What is the asymptotic runtime ($\Theta$) of your algorithm in terms of the
 number of comparisons of pancakes? What is it in terms of the number of flips?
 Add your answer to this markdown file.
+
+The outer loop runs n times along with each of the three inner loops. This provides
+$T(3n^2) \in \Theta(n^2)$  as the runetime complexity. The number of flips would be 2n
+meaning $T(2n) \in \Theta(n)$  because I flip it 2 times per outer for loop iteration 
+and the while loop runs n times.
+
 
